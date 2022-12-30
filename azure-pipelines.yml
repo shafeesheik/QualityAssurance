@@ -5,10 +5,12 @@
 
 
 trigger:
-- main
+- Test-EdgePC
 
 pool:
-  vmImage: autocrt-print01
+  name: QualiZeal_Test
+  demands: -agent.name -equals '$(CIR-R-D-0010)
+  vmImage: autocrt-print01;
 
 steps:
 - task: Maven@3
